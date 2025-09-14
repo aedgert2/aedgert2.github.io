@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Edgerton's Adventurous Emu || ITIS 3135 Design Firm</title>
+    <!-- https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff -->
+    <style>
+        :root {
+            --black: #000000ff;
+            --oxford-blue: #14213dff;
+            --orange-web: #fca311ff;
+            --platinum: #e5e5e5ff;
+            --white: #ffffffff;
+            --carnation-pink: #ff499e;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            background: var(--platinum);
+            color: var(--black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--oxford-blue);
+            color: var(--white);
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 img {
+            margin-left: 15px;
+            width: 100px;
+            height: auto;
+            background-color: var(--white);
+            border-radius: 50%;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 0.5em 0;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            color: var(--white);  
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            background: var(--platinum);
+            padding: 0.75rem 0;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            color: var(--oxford-blue);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.2s, background 0.2s;
+            padding: 0.25em 0.75em;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background: var(--oxford-blue);
+            color: var(--orange-web);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+            padding: 2.5rem 2rem;
+            color: var(--black);
+        }
+
+        h2, h3 {
+            color: var(--oxford-blue);
+            margin-top: 0;
+        }
+
+        footer {
+            background: var(--oxford-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem 1.5rem 1rem;
+            margin-top: 3rem;
+            border-top: 4px solid var(--orange-web);
+        }
+
+        footer nav {
+            background: none;
+            box-shadow: none;
+            gap: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer nav a {
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        footer nav a:hover {
+            color: var(--orange-web);
+        }
+
+        footer p {
+            margin: 0.5em 0 0 0;
+            font-size: 0.95rem;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        @media (max-width: 700px) {
+            main {
+                padding: 1rem;
+            }
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Cutting Edge Design<img src="../images/CuttingEdgeDesign.png" alt="Company logo"></h1>
+        <p><em>Cutting edge, by design.</em></p>
+    </header>
+    <main>
+        <h2>Cutting Edge Design Services</h2>
+        <p>At Cutting Edge Design, we transform sharp ideas into reality!</p>
+        <ul>
+            <li><span style="color: var(--orange-web);">Cutting-edge</span> code that slices through bugs</li>
+            <li>Sharp designs that really <span style="color: var(--orange-web);">point</span> your brand forward</li>
+            <li><span style="color: var(--orange-web);">Edge</span> of your seat creativity in every project</li>
+            <li>Polished interfaces that leave a fine <span style="color: var(--orange-web);">edge</span> on user experience</li>
+            <li>Precision layouts that never dull your <span style="color: var(--orange-web);">edge</span></li>
+            <li>Margins that are never too wide, always on <span style="color: var(--orange-web);">point</span></li>
+        </ul>
+        <p>We aim to help clients bring their vision to life, offering personalized support and creative solutions.</p>
+        <address>
+            Email: contact@cuttingedgedesign.co<br>
+            Phone: (555) 987-6543<br>
+            Address: 123 Innovation Lane, Charlotte, NC
+        </address>
+    </main>
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/aedgert2/">CLT Web</a>
+            || 
+            <a href="https://github.com/aedgert2">GitHub</a>
+            ||
+            <a href="http://aedgert2.GitHub.io">GitHub.io</a>
+            ||
+            <a href="https://www.linkedin.com/in/aedgert2/">LinkedIn</a>
+        </nav>
+        <p>Page Built by <a href="cuttingedgedesign.co/">Cutting Edge Design</a> &copy; 2025</p>
+    </footer>
+</body>
+</html>
