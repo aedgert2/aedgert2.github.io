@@ -1,4 +1,6 @@
-
+        /* Edit for no default values and break down into only necessary parts */
+        
+        
         .left-align { text-align: left; }
         .center-align { text-align: center; display: block; margin-left: auto; margin-right: auto; }
         .right-align { text-align: right; }
