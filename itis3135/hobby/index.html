@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC Building - Hobby Site</title>
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* === Dark Tech Theme === */
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: #0a0a0f;
+        color: #d0d0d0;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #00aaff;
+        text-shadow: 0 0 10px #0077cc;
+        margin-top: 0;
+      }
+
+      p {
+        line-height: 1.6;
+        margin-bottom: 1.4em;
+        text-align: justify;
+      }
+
+      a {
+        color: #00ffff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #ffffff;
+        text-shadow: 0 0 5px #00ffff;
+      }
+
+      header,
+      footer {
+        background-color: #101020;
+        color: #00aaff;
+        text-align: center;
+        padding: 1em 0;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-weight: bold;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 2em auto;
+        padding: 1.5em;
+        background-color: #141422;
+        border-radius: 10px;
+        box-shadow: 0 0 20px #003344;
+      }
+
+      section {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+        padding: 1em 0;
+      }
+
+      .active {
+        display: block;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #00aaff;
+        margin: 2em 0;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* === Figures and Images === */
+      figure {
+        text-align: center;
+        margin: 2em 0;
+      }
+
+      img {
+        max-width: 80%;
+        height: auto;
+        border-radius: 16px;
+        border: 2px solid #00aaff;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+        display: block;
+        margin: 2em auto;
+      }
+
+      /* === Cards / Boxes === */
+      .card {
+        background-color: #111;
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+        margin: 2em 0;
+      }
+
+      /* === Store Section === */
+      .store {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        padding: 1.2rem;
+        border-radius: 12px;
+        transition: background-color 0.3s ease;
+      }
+
+      .store:hover {
+        background-color: #181818;
+      }
+
+      .store-img {
+        flex-shrink: 0;
+        width: 160px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .store-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .store-text {
+        flex: 1;
+      }
+
+      @media (max-width: 768px) {
+        .store {
+          flex-direction: column;
+          text-align: center;
+        }
+        .store-img {
+          width: 200px;
+          height: 120px;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      /* === Lists === */
+      ul {
+        list-style-type: disc;
+        padding-left: 1.5em;
+      }
+      li {
+        margin-bottom: 0.6em;
+        line-height: 1.5;
+      }
+
+      /* === Tables === */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5em 0;
+        background-color: #111;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+      }
+
+      th,
+      td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      th {
+        font-weight: 600;
+        background-color: #1a1a1f;
+      }
+      tr:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      /* === Video Container === */
+      .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 2em auto;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+        padding-bottom: 56.25%;
+        height: 0;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .center-align {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>PC Building</h1>
+      <nav>
+        <a href="#" onclick="showSection('what')">🏠 What</a> |
+        <a href="#" onclick="showSection('who')">👤 Who</a> |
+        <a href="#" onclick="showSection('when')">🕒 When</a> |
+        <a href="#" onclick="showSection('where')">📍 Where</a> |
+        <a href="#" onclick="showSection('how')">⚙️ How</a> |
+        <a href="#" onclick="showSection('why')">💡 Why</a> |
+        <a href="#" onclick="showSection('ai-prompts')">🤖 AI Prompts</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- WHAT -->
+      <section id="what" class="active">
+        <h2>What is PC Building?</h2>
+        <p>
+          PC building is the process of putting together a computer from
+          individual parts. You choose each component based on what you want the
+          system to do, like gaming, video editing, or general use. The main
+          parts include the CPU, motherboard, memory, graphics card, storage,
+          power supply, and case.
+        </p>
+        <p>
+          Each piece connects to the motherboard and works together to run
+          programs and handle tasks. You also install a cooling system to keep
+          everything at a safe temperature and make sure the power supply gives
+          enough energy to every part.
+        </p>
+        <p>
+          The goal is to create a system that fits your needs, runs smoothly,
+          and can be upgraded over time. Building it yourself gives you more
+          control, helps you understand how computers work, and can save money
+          compared to buying one prebuilt.
+        </p>
+        <figure>
+          <img src="images/rgbpc.jpg" alt="Custom PC build with RGB lighting" />
+          <figcaption>Custom PC build with RGB lighting installed.</figcaption>
+        </figure>
+        <hr />
+      </section>
+
+      <!-- WHO -->
+      <section id="who">
+        <h2>Who Builds PCs?</h2>
+        <p>
+          People build PCs for different reasons depending on what they need
+          from their computer. Gamers often build their own systems to get
+          better graphics performance and smoother frame rates.
+        </p>
+        <p>
+          Content creators like video editors, streamers, and designers build
+          PCs so they can handle demanding software.
+        </p>
+        <p>
+          Students and developers build PCs that focus on reliability and
+          multitasking.
+        </p>
+        <p>
+          Some people build PCs just because they like the process. It is a
+          hands-on way to learn about computer hardware, performance tuning, and
+          troubleshooting.
+        </p>
+        <figure>
+          <img src="images/pcBuilder.jpg" alt="Person assembling PC parts" />
+          <figcaption>Person assembling a PC with motherboard and components.</figcaption>
+        </figure>
+        <hr />
+      </section>
+
+      <!-- WHEN -->
+      <section id="when">
+        <h2>When to Build a PC</h2>
+        <p>
+          PC parts go on sale at certain times of the year, especially during
+          major shopping events or right after new hardware releases. Watching
+          these dates can help you save a lot when building or upgrading your
+          system.
+        </p>
+        <figure>
+          <table>
+            <thead>
+              <tr>
+                <th>Time of Year</th>
+                <th>Event</th>
+                <th>Common Parts on Sale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Late November</td>
+                <td>Black Friday / Cyber Monday</td>
+                <td>CPUs, GPUs, SSDs, RAM, monitors</td>
+              </tr>
+              <tr>
+                <td>Mid July</td>
+                <td>Amazon Prime Day</td>
+                <td>Storage drives, cases, peripherals</td>
+              </tr>
+              <tr>
+                <td>Late August to September</td>
+                <td>Back to School Sales</td>
+                <td>Memory, small upgrades, laptops</td>
+              </tr>
+              <tr>
+                <td>March to April</td>
+                <td>Spring Clearance</td>
+                <td>Older generation CPUs and GPUs</td>
+              </tr>
+              <tr>
+                <td>After New Releases</td>
+                <td>Product Launches</td>
+                <td>Previous generation parts drop in price</td>
+              </tr>
+            </tbody>
+          </table>
+          <figcaption>
+            Schedule of PC part sales throughout the year.
+          </figcaption>
+        </figure>
+        <p>
+          Tracking prices with tools like PCPartPicker or price history websites
+          can help you know when a deal is actually good.
+        </p>
+        <hr />
+      </section>
+
+      <!-- WHERE -->
+      <section id="where">
+        <h2>Where to Get PC Parts</h2>
+        <p>
+          Choosing the right source for your components matters as much as the
+          parts themselves.
+        </p>
+
+        <div class="store card">
+          <figure class="store-img">
+            <img src="images/MicroCenter.png" alt="Micro Center Logo" />
+            
+          </figure>
+          <div class="store-text">
+            <h3>Micro Center</h3>
+            <p>
+              Micro Center is ideal for in-person builders who want to see
+              hardware up close. CPU and motherboard bundle deals often beat
+              online prices.
+            </p>
+          </div>
+        </div>
+
+        <div class="store card">
+          <figure class="store-img">
+            <img src="images/NewEgg.png" alt="Newegg logo" />
+            
+          </figure>
+          <div class="store-text">
+            <h3>Newegg</h3>
+            <p>
+              Newegg offers one of the largest online catalogs for PC parts with
+              solid filtering tools to compare chipsets, form factors, and
+              wattage.
+            </p>
+          </div>
+        </div>
+
+        <div class="store card">
+          <figure class="store-img">
+            <img src="images/BestBuy.jpg" alt="Best Buy logo" />
+            
+          </figure>
+          <div class="store-text">
+            <h3>Best Buy</h3>
+            <p>
+              Best Buy works best for quick upgrades and emergency replacements.
+              Local pickup and return options make it easy to swap parts fast.
+            </p>
+          </div>
+        </div>
+        <hr />
+      </section>
+
+      <!-- HOW -->
+      <section id="how">
+        <h2>How to Build a PC</h2>
+        <p>
+          Building your own PC is easier than it looks. It’s all about picking
+          compatible parts and putting them together in the right order. Here’s
+          the basic idea:
+        </p>
+        <ol>
+          <li>
+            <strong>Pick Your Parts:</strong> CPU, motherboard, RAM, GPU,
+            storage, PSU, and case.
+          </li>
+          <li>
+            <strong>Prep Your Workspace:</strong> Clean surface and tools ready.
+          </li>
+          <li>
+            <strong>Install Core Components:</strong> CPU, cooler, RAM on
+            motherboard.
+          </li>
+          <li>
+            <strong>Assemble the Case:</strong> Motherboard, power supply, and
+            drives installed.
+          </li>
+          <li>
+            <strong>Add GPU & Cables:</strong> Connect graphics card and
+            necessary cables.
+          </li>
+          <li>
+            <strong>Boot and Install OS:</strong> Power on, enter BIOS, install
+            system.
+          </li>
+        </ol>
+        <p>
+          Check out this detailed video guide from one of my favorite YouTubers!
+        </p>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/qkr07CutHrU?si=mUi43i6iNyqZ83EB"
+            title="How to Build a PC"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <hr />
+      </section>
+
+      <!-- WHY -->
+      <section id="why">
+        <h2>Why Build Your Own PC?</h2>
+        <p>
+          Building your own PC gives you full control over performance, cooling,
+          and upgrade options, without paying for filler parts.
+        </p>
+        <p>
+          It’s also the best way to learn how computers work on a real level
+          rather than just using them. You get hands-on experience with hardware.
+        </p>
+        <p>
+          And honestly, it’s just fun. Seeing your build power on for the first
+          time is one of the best feelings in tech.
+        </p>
+        <figure>
+          <img src="images/Success_PC.jpg" alt="Finished custom PC" />
+          <figcaption>The feeling when you successfully complete your build!</figcaption>
+        </figure>
+
+        <div class="card">
+          <h3>What You Gain from Building</h3>
+          <ul>
+            <li>
+              <strong>Performance Tuning:</strong> Optimize CPU, GPU, RAM.
+            </li>
+            <li>
+              <strong>System Knowledge:</strong> Understand part interactions.
+            </li>
+            <li>
+              <strong>Hands-On Skills:</strong> Cable management, cooling, BIOS
+              setup.
+            </li>
+            <li>
+              <strong>Budget Control:</strong> Spend wisely, skip prebuilt
+              overhead.
+            </li>
+          </ul>
+        </div>
+        <hr />
+      </section>
+
+       <!-- AI PROMPTS -->
+      <section id="ai-prompts">
+        <h2>AI Prompts</h2>
+        <p><strong>AI Model Used:</strong> GPT-5-mini</p>
+        <p><strong>Purpose:</strong> I used AI to help come up with the dark tech theme for the website and to assist in writing the JavaScript that switches between sections so only one section is visible at a time.</p>
+        <p><strong>Prompt 1:</strong> "Suggest a visually appealing dark tech theme for a PC building hobby website, including color schemes, font choices, and general layout ideas."</p>
+        <p><strong>Prompt 2:</strong> "Write JavaScript that allows a single-page website to switch between multiple sections (What, Who, When, Where, How, Why), hiding all other sections when one is selected, with smooth fade-in animations."</p>
+      </section>
+    </main>
+
+    <footer>
+      <p class="center-align">
+        Page Built by
+        <a href="cuttingedgedesign.co/">Cutting Edge Design</a> &copy; 2025
+      </p>
+    </footer>
+
+    <script>
+      function showSection(id) {
+        document
+          .querySelectorAll("section")
+          .forEach((sec) => sec.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+      }
+    </script>
+  </body>
+</html>

@@ -86,11 +86,11 @@ header nav a:focus {
 a {
   color: var(--accent);
   text-decoration: none;
-  margin: 0 .5rem;
 }
-a:hover,
-a:visited { color: var(--accent-dark); }
-a:hover { text-decoration: underline; }
+a:hover { 
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
 
 .center-align {
   text-align: center;
@@ -99,6 +99,7 @@ a:hover { text-decoration: underline; }
   margin-right: auto;
 }
 
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
