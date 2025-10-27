@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrew Edgerton's Adventurous Emu || Introduction Form</title>
+  <link rel="stylesheet" href="styles/default.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div data-include="components/header.html"></div>
+  <main>
+    <div id="formHeadings">
+      <h2 class="center-align">Introduction Form</h2>
+    </div>
+
+    <form id="introForm">
+      <fieldset>
+        <legend>Basic Information</legend>
+        <label>First Name: <input type="text" id="firstName" value="Andrew" placeholder="Enter your first name" required></label><br>
+        <label>Middle Name (optional): <input type="text" id="middleName" value="J" placeholder="Enter your middle initial"></label><br>
+        <label>Nickname/Preferred Name (optional): <input type="text" id="nickname" placeholder="Enter your nickname"></label><br>
+        <label>Last Name: <input type="text" id="lastName" value="Edgerton" placeholder="Enter your last name" required></label><br>
+        <label>
+          <input type="checkbox" id="ackCheckbox" required>
+          I acknowledge that this is my work and I understand the academic integrity policy.
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Mascot Info</legend>
+        <label>Mascot Adjective: <input type="text" id="mascotAdj" value="Adventurous" placeholder="Enter a descriptive adjective" required></label><br>
+        <label>Mascot Animal: <input type="text" id="mascotAnimal" value="Emu" placeholder="Enter a mascot animal" required></label><br>
+        <label>Divider: <input type="text" id="divider" value="|" placeholder="Enter a divider symbol" required></label><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Picture</legend>
+        <label>Upload Image:
+          <input type="file" id="picture" accept="image/*">
+        </label><br>
+        <label>Picture Caption:
+          <input type="text" id="picCaption" value="Professional Photo" placeholder="Enter a caption for your picture" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label>Personal Background:
+          <textarea id="personalBg" required placeholder="Write a brief personal background">I was born in Raleigh NC but now have lived in Charlotte the majority of my life.</textarea>
+        </label><br>
+        <label>Professional Background:
+          <textarea id="profBg" required placeholder="Write your professional background">I have over five years of experience working at Home Depot, both part-time and full-time.</textarea>
+        </label><br>
+        <label>Academic Background:
+          <textarea id="acadBg" required placeholder="Write your academic background">I graduated with an Associate's degree from Central Piedmont Community College in 2024, and I am now pursuing my Bachelor’s in Computer Science with a minor in mathematics.</textarea>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Quote (Required)</legend>
+        <label>Quote:
+          <input type="text" id="quote" value="Not all those who wander are lost." placeholder="Enter a quote" required>
+        </label><br>
+        <label>Quote Author:
+          <input type="text" id="quoteAuthor" value="J.R.R. Tolkien" placeholder="Enter the quote author" required>
+        </label>
+      </fieldset>
+
+      <fieldset id="coursesField">
+        <legend>Courses I'm Taking</legend>
+
+        <!-- Default 5 courses -->
+        <div class="course">
+          <input type="text" class="dept" value="MATH" placeholder="Department" required>
+          <input type="text" class="num" value="1242" placeholder="Course number" required>
+          <input type="text" class="name" value="Calculus 2" placeholder="Course name" required>
+          <input type="text" class="reason" placeholder="Reason for taking">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+
+        <div class="course">
+          <input type="text" class="dept" value="ITSC" placeholder="Department" required>
+          <input type="text" class="num" value="3160" placeholder="Course number" required>
+          <input type="text" class="name" value="Database Design and Implementation" placeholder="Course name" required>
+          <input type="text" class="reason" placeholder="Reason for taking">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+
+        <div class="course">
+          <input type="text" class="dept" value="ITIS" placeholder="Department" required>
+          <input type="text" class="num" value="3135" placeholder="Course number" required>
+          <input type="text" class="name" value="Front-End Web Application Development" placeholder="Course name" required>
+          <input type="text" class="reason" placeholder="Reason for taking">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+
+        <div class="course">
+          <input type="text" class="dept" value="ITSC" placeholder="Department" required>
+          <input type="text" class="num" value="2175" placeholder="Course number" required>
+          <input type="text" class="name" value="Logic and Algorithms" placeholder="Course name" required>
+          <input type="text" class="reason" placeholder="Reason for taking">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+
+        <div class="course">
+          <input type="text" class="dept" value="ITSC" placeholder="Department" required>
+          <input type="text" class="num" value="3155" placeholder="Course number" required>
+          <input type="text" class="name" value="Software Engineering" placeholder="Course name" required>
+          <input type="text" class="reason" placeholder="Reason for taking">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+
+        <button type="button" id="addCourse">Add Course</button>
+      </fieldset>
+
+      <fieldset>
+  <legend>Footer Links</legend>
+  <label>CLT Web: <input type="url" id="linkCLTWeb" value="https://webpages.charlotte.edu/aedgert2/" placeholder="Enter CLT Web URL" required></label><br>
+  <label>GitHub: <input type="url" id="linkGithub" value="https://github.com/aedgert2" placeholder="Enter GitHub URL" required></label><br>
+  <label>GitHub.io: <input type="url" id="linkGithubIO" value="http://aedgert2.github.io" placeholder="Enter GitHub.io URL" required></label><br>
+  <label>FreeCodeCamp: <input type="url" id="linkFCC" value="https://www.freecodecamp.org/aedgert2" placeholder="Enter FreeCodeCamp URL" required></label><br>
+  <label>Codecademy: <input type="url" id="linkCodecademy" value="https://www.codecademy.com/profiles/aedgert2" placeholder="Enter Codecademy URL" required></label><br>
+  <label>LinkedIn: <input type="url" id="linkLinkedIn" value="https://www.linkedin.com/in/aedgert2/" placeholder="Enter LinkedIn URL" required></label>
+</fieldset>
+
+      <fieldset>
+        <legend>Extras (Optional)</legend>
+        <label>Funny thing:
+          <input type="text" id="funnyThing" placeholder="Enter something funny (optional)">
+        </label><br>
+        <label>Something I would like to share:
+          <input type="text" id="shareSomething" placeholder="Optional sharing">
+        </label>
+      </fieldset>
+
+      <div class="buttons center-align">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="clearForm">Clear</button>
+      </div>
+    </form>
+
+    <div id="resultContainer"></div>
+  </main>
+  <script src="scripts/HTMLInclude.js"></script>
+  <script src="scripts/introduction.js"></script>
+</body>
+</html>
