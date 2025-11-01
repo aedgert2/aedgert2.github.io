@@ -1,0 +1,124 @@
+:root {
+  --bg: #f5f7fa;
+  --accent: #2a5d84;
+  --accent-dark: #17405d;
+  --muted: #ccc;
+  --text: #333;
+  --card-bg: #fff;
+}
+
+/* Reset & Base */
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Headings */
+h1 {
+  font-family: "Trebuchet MS", sans-serif;
+  color: var(--accent);
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-family: "Trebuchet MS", sans-serif;
+  color: var(--accent);
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Layout */
+header, footer { padding: 1rem; margin: 1rem 0; }
+
+main {
+    width: 90%;             
+    max-width: 900px;      
+    margin: 0 auto;         
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+main > * {
+  margin: 1.5rem;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  main { width: 95%; }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  main { width: 92%; }
+}
+@media (min-width: 1025px) {
+  main { width: 80%; }
+}
+
+/* Lists & Helpers */
+main ul li { margin-bottom: .8em; }
+
+/* Header/Footer */
+header, footer { text-align: center; }
+header { border-bottom: 2px solid var(--muted); position: relative; z-index: 10; }
+footer { border-top: 2px solid var(--muted); font-size: .9rem; }
+
+header nav { display: inline-block; }
+header nav a {
+  display: inline-block;
+  padding: .4rem .6rem;
+  border-radius: 4px;
+}
+header nav span { color: var(--muted); margin: 0 .25rem; }
+header nav a:focus {
+  outline: 3px solid rgba(42,93,132,0.12);
+  outline-offset: 3px;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { 
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+.center-align {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+caption {
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
