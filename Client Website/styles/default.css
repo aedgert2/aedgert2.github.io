@@ -1,0 +1,199 @@
+/* ===========================
+   COLOR KEY (Green Theme)
+==========================
+--color-dark-green:    Header / Footer background
+--color-green:         Buttons / Highlights
+--color-light-green:   Hover accents
+--color-mint:          Hero background
+--color-forest:        Text and headings
+--color-bg:            Page background
+--color-text:          Main text color
+=========================== */
+
+:root {
+    --color-dark-green: #064e3b;
+    --color-green: #059669;
+    --color-light-green: #10b981;
+    --color-mint: #d1fae5;
+    --color-forest: #065f46;
+    --color-bg: #f8faf8;
+    --color-text: #1b1b1b;
+}
+
+/* ===========================
+   BASE STYLES
+=========================== */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER / NAVIGATION
+=========================== */
+header {
+    background-color: var(--color-dark-green);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.site-title a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   LINKS - FIX: NO COLOR CHANGE
+=========================== */
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit; /* inherit parent color */
+    text-decoration: none; /* remove underline */
+}
+
+/* ===========================
+   NAV SPECIFIC LINKS
+=========================== */
+.nav-links a,
+.site-title a,
+footer a {
+    color: inherit;
+}
+
+.nav-links a:hover,
+.site-title a:hover,
+footer a:hover {
+    color: inherit; /* never change */
+    text-decoration: none;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.hero {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-mint) 0%, #ecfdf5 100%);
+    border-bottom: 2px solid var(--color-light-green);
+}
+
+.h1 {
+    font-size: 2.2rem;
+    color: var(--color-mint);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--color-forest);
+    font-size: 1.1rem;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--color-green);
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--color-dark-green);
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+h2, h3 {
+    color: var(--color-forest);
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+/* ===========================
+   DEMO ELEMENTS
+=========================== */
+.flex-demo {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.flex-demo div {
+    background: var(--color-green);
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background: var(--color-light-green);
+    margin: 2rem auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.animated-box:hover {
+    transform: scale(1.15) rotate(8deg);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: var(--color-dark-green);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}

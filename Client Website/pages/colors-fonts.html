@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors & Fonts | Learn CSS with Angel</title>
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div data-include="../components/header.html"></div>
+
+    <main>
+        <h2 class="hero-title">Colors and Fonts</h2>
+        <p>Experiment with text colors and fonts to see how CSS styling works in real time.</p>
+
+        <section>
+            <h3>Live Text Color Picker</h3>
+            <label for="textColor">Choose Text Color: </label>
+            <input type="color" id="textColor" value="#065f46">
+            <p id="sampleText" style="font-size:1.2rem; margin-top:10px;">This is a sample text!</p>
+        </section>
+
+        <section>
+            <h3>Font Preview</h3>
+            <label for="fontSelect">Choose Font: </label>
+            <select id="fontSelect">
+                <option value="'Inter', sans-serif">Inter</option>
+                <option value="'Roboto', sans-serif">Roboto</option>
+                <option value="'Montserrat', sans-serif">Montserrat</option>
+            </select>
+            <p id="fontSample" style="margin-top:10px;">The quick brown fox jumps over the lazy dog.</p>
+        </section>
+    </main>
+
+    <div data-include="../components/footer.html"></div>
+    <script src="../scripts/HTMLInclude.js"></script>
+    <script src="../scripts/colors-fonts.js"></script>
+</body>
+</html>

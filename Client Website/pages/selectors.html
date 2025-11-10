@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors | Learn CSS with Angel</title>
+    <link rel="stylesheet" href="../styles/default.css" />
+  </head>
+  <body>
+    <div data-include="../components/header.html"></div>
+
+    <main>
+      <h2 class>CSS Selectors</h2>
+      <p>
+        Learn how to target elements in your HTML using different CSS selectors
+        and specificity rules.
+      </p>
+
+      <section>
+        <h3>Interactive Example</h3>
+        <p>Click the button to show the CSS selector example:</p>
+        <button
+          class="button"
+          onclick="document.getElementById('example1').classList.toggle('hidden')"
+        >
+          Show Example
+        </button>
+        <pre id="example1" class="hidden">
+            .my-class {
+                color: var(--color-green);
+                font-weight: bold;
+            }
+            </pre
+        >
+      </section>
+
+      <section>
+        <h3>Mini Quiz</h3>
+        <p>Which selector targets all &lt;p&gt; elements?</p>
+        <button class="button" onclick="checkAnswer(this, true)">p</button>
+        <button class="button" onclick="checkAnswer(this, false)">.p</button>
+        <button class="button" onclick="checkAnswer(this, false)">#p</button>
+        <p id="quizFeedback" style="margin-top: 10px"></p>
+      </section>
+    </main>
+
+    <div data-include="../components/footer.html"></div>
+    <script src="../scripts/HTMLInclude.js"></script>
+    <script src="../scripts/selectors.js"></script>
+    </script>
+  </body>
+</html>
